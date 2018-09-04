@@ -4,10 +4,8 @@ MAINTAINER  <https://github.com/naumvd95>
 ENV PYLINT_VERSION=1.7.2
 
 RUN apk add --no-cache --virtual .run-deps \
-    && pip install flake8 flake8-docstrings pylint \
-    && mkdir -p /code
+    && pip install flake8 flake8-docstrings pylint
 
-WORKDIR /code
 COPY setup.sh /
 
 ENTRYPOINT ["/setup.sh"]
