@@ -8,12 +8,24 @@ Useful arch: Jenkins+pipeline+docker
 
 Containerized checks is useful when you don't want to install packages on Jenkins workers
 
+## Dockerhub integration
+
+1. Link github account into dockerhub
+1. Choose access level (i prefer read-only)
+1. Create posthook to trigger builds and get `TOKEN`
+
 ## Content
 
 ### Python2 lint
 
-```
+```bash
 docker run --rm -w /code -v ~/path/to/code:/code vnaumov/pylint2:alpine2
+```
+
+Hook:
+
+```bash
+curl -XPOST -H "Authorization: Bearer $TOKEN" https://registry.hub.docker.com/u/vnaumov/pylint2/trigger/fe59a664-05f6-46c7-a06d-60997ccde6ce/
 ```
 
 ### Go lint
