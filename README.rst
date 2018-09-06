@@ -1,5 +1,5 @@
 # cicd-multi-lint
-js/py/sh/go/helm-charts checker for CI/CD
+js/py/go checker for CI/CD
 
 Content
 -------
@@ -9,10 +9,7 @@ Content
 
     .. code-block:: bash
 
-        docker run --rm -w /code -v ~/path/to/code:/code vnaumov/pylint:alpine2
+        docker run --rm -w /code -v ~/path/to/code:/code vnaumov/pylint2:alpine2
 
-#. Helm lint
 #. Go lint
 #. JS lint
-#. BASH lint
-
