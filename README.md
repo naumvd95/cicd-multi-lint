@@ -5,6 +5,7 @@ js/py/go checker for CI/CD
 ## Getting Started
 
 Useful arch: Jenkins+pipeline+docker
+
 Containerized checks is useful when you don't want to install packages on Jenkins workers
 
 ## Content
