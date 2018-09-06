@@ -25,7 +25,7 @@ docker run --rm -w /code -v ~/path/to/code:/code vnaumov/pylint2:alpine2
 Hook:
 
 ```bash
-curl -XPOST -H "Authorization: Bearer $TOKEN" https://registry.hub.docker.com/u/vnaumov/pylint2/trigger/fe59a664-05f6-46c7-a06d-60997ccde6ce/
+curl -XPOST  https://registry.hub.docker.com/u/vnaumov/pylint2/trigger/$TOKEN/
 ```
 
 ### Go lint
